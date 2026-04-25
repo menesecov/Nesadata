@@ -1,0 +1,25 @@
+import os
+import sys
+from rich.console import Console
+
+console = Console()
+
+BANNER = """
+[bold cyan]
+███╗   ██╗███████╗███████╗ █████╗ ██████╗  █████╗ ████████╗ █████╗
+████╗  ██║██╔════╝██╔════╝██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗
+██╔██╗ ██║█████╗  ███████╗███████║██║  ██║███████║   ██║   ███████║
+██║╚██╗██║██╔══╝  ╚════██║██╔══██║██║  ██║██╔══██║   ██║   ██╔══██║
+██║ ╚████║███████╗███████║██║  ██║██████╔╝██║  ██║   ██║   ██║  ██║
+╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
+[/bold cyan]
+[dim]by SkizmikLolz(lolz.live/members/8331943)[/dim]
+"""
+
+def clear() -> None:
+    if sys.platform == "win32":
+        os.system("cls")
+    else:
+        os.system("clear")
+
+    console.print(BANNER)
